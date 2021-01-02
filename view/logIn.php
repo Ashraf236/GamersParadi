@@ -1,3 +1,10 @@
+<?php
+     if(isset($_GET['reg_succ'])){
+
+	 echo"registration successfull. please login";
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

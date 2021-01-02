@@ -71,3 +71,18 @@
     </center>
 </body>
 </html>
+<?php
+  
+    if(isset($_GET['null_sub'])){
+
+     echo"All input field must be inserted";
+    }
+    elseif(isset($_GET['uname_exist'])){
+        
+      echo"User name already exist";
+    }
+    elseif(isset($_GET['email_exist'])){
+        
+      echo"email already exist";
+    }
+?>

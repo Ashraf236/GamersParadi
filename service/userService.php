@@ -87,4 +87,16 @@
 		//}
 		//}
     };
+   function register($nm,$eml,$unm,$ad,$cnt,$dofb,$pass){
+   	$conn = getConnection();
+   	$utyp="user";
+   	$sql ="insert into users (`uname`, `name`, `email`, `password`, `address`, `contactno`, `dob`, `usertype`) values ('$unm','$nm','$eml','$pass','$ad','$cnt','$dofb','$utyp')";
+   	$status = mysqli_query($conn, $sql);
+		
+		if($status){
+			return true; 
+		}else{
+			return false;
+		}
+   };
 ?>
