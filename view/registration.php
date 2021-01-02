@@ -59,6 +59,7 @@
                         <td colspan="2">
                             <input type="submit" name="submit" value="submit">
                             <button type="reset">Reset</button>
+                            <a href="../">Back</a>
                         </td>
                         <td></td>
 
