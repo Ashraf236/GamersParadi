@@ -21,11 +21,11 @@ echo $_POST['dob'];
 		}
 		else{
 			$unameCheck = validateByUsername($username);
-		    $emailCheck = validateByUsername($email);
+		    $emailCheck = validateByEmail($email);
 			if($unameCheck){
 			    header("location: ../view/registration.php?uname_exist");
 		    }
-		    else if($emailCheck){
+		    if($emailCheck){
 		    	header("location: ../view/registration.php?email_exist");
 		    }
 		    else if($password!==$con_pass){
