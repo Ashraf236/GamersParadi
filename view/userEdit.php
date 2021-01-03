@@ -28,10 +28,10 @@
 	 		 
 	 		   <tr>
 	 		   	 <td>
-	 				<form method="post" action="../php/editCheck.php" onsubmit="return regUnameCheck()">
+	 				<form method="POST" action="../php/editCheck.php" onsubmit="return regUnameCheck()">
 	 					Username :  <?php echo $user['uname']; ?>
 	 					<input type="name" name="username" id="username" oninput="checkUser()" onkeypress="regUnameCheck()">
-	 					<input type="submit" name="changeName" value="change">
+	 					<input type="submit" name="submit" value="submit">
 	 					<p id="errorMsg"> </p>
 	 					<p id="unameMsg"> </p>
 	 				</form>
@@ -40,10 +40,10 @@
 	 		</tr>
 	 		<tr>
 	 			<td>
-	 				<form method="post" action="../php/editCheck.php" onsubmit="return regEmailCheck()">
+	 				<form method="POST" action="../php/editCheck.php" onsubmit="return regEmailCheck()">
 	 					Email :  <?php echo $user['email']; ?>
 	 					<input type="email" name="email" id="email" oninput="regEmailCheck()">
-	 					<input type="submit" name="changeEmail" value="change">
+	 					<input type="submit" name="changeEmail" value="changeEmail">
 	 					<p id="availabiltyMsg"> </p>
 	 					<p id="emailMsg"> </p>
 	 				</form>
@@ -51,11 +51,11 @@
 	 		</tr>
 	 		<tr>
 	 			<td>
-	 				<form method="post" action="../php/editCheck.php" onsubmit="return regConPassCheck()">
+	 				<form method="POST" action="../php/editCheck.php" onsubmit="return regConPassCheck()">
 	 					Password :<br> 
 	 					New Password :<input type="password" name="password" id="password" oninput="regPassCheck()"><br><br>
 	 					Retype Password :<input type="password" name="con_pass" id="con_pass" oninput="regConPassCheck()">
-	 					<input type="submit" name="changePassword" value="change">
+	 					<input type="submit" name="changePassword" value="changePassword">
 	 					<p id="passMsg"> </p>
 	 					<p id="con_passMsg"> </p>
 	 				</form>

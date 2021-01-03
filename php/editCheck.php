@@ -1,10 +1,9 @@
 <?php 
-      require_once('../service/usersService.php');
+      require_once('../service/userService.php');
       session_start();
       $usname = $_SESSION['username'];
-      echo $usname;
       
-    if(isset($_POST['changeName'])){
+    if(isset($_POST['submit'])){
 		if(empty($_POST['username'])){
 			header('location: ../view/userEdit.php?msg=null_username');
 		}
@@ -21,7 +20,7 @@
 
 	   }
 	}
-	if(isset($_POST['changeEmail'])){
+	else if(isset($_POST['changeEmail'])){
 		if(empty($_POST['email'])){
 			header('location: ../view/userEdit.php?msg=null_email');
 		}
@@ -35,7 +34,8 @@
 	   	     header('location: ../view/userEdit.php?msg=email_not_chnged');
 	   }
 	}
-	if(isset($_POST['changePassword'])){
+   }
+	else if(isset($_POST['changePassword'])){
 		if(empty($_POST['password']&&$_POST['con_pass'] )){
 			header('location: ../view/userEdit.php?msg=null_password');
 		}
