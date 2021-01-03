@@ -19,7 +19,7 @@
 			 if($userCheck){
 			 	$user=[];
 			 	$user = getByUsername($uname);
-				$_SESSION['status']  = "Ok";
+				$_SESSION['status']  = "true";
 				$userType = $user['usertype'];
 				echo $userType;
 				if($userType =='admin'){

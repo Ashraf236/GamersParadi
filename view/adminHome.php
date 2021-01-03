@@ -13,7 +13,7 @@
 		</header>
 	</center>
 	<h2>
-		<a href="product.php">PRODUCT      </a>
+		<a href="../view/adminProduct.php">PRODUCT      </a>
 		<p>                  </p>
 		<a href="user.php">VIEW USERS      </a>
 		<p>                  </p>

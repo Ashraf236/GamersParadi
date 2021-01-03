@@ -22,8 +22,7 @@
 		//	echo "DB connection error";
 		//}
 		//else{
-
-		$sql = "select * from users where uname='$un'";
+        $sql = "select * from users where uname='$un'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		//return $row;
@@ -63,6 +62,23 @@
 		//}
 		//}
     };
+    function getUser($usname){
+
+		$conn = getConnection();
+		$sql = "select * from users where uname = '$usname'";
+
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		//$users = [];
+		//array_push($users, $row);
+
+		//while ($row = mysqli_fetch_assoc($result)) {
+		//	array_push($users, $row);
+		//}
+
+		return $row;
+	};
+
     function validateByEmail($em){
 		$conn = getConnection();
         
