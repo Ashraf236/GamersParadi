@@ -81,6 +81,26 @@
 	 				</form>
 	 			</td>
 	 		</tr>
+	 		<tr>
+	 			 <td>
+	 			 	 <form method="POST" action="../php/editCheck.php" onsubmit="return regContCheck()">
+	 					Contact no:  <?php echo $user['contactno']; ?>
+                        <input type="text" name="contact" id="contact" oninput="regContCheck()">
+                        <input type="submit" name="changeContact" value="changeContact">
+                        <p id="contactMsg"></p>
+                      </form>  
+                 </td>       
+	 		</tr>
+	 		<tr>
+	 			 <td>
+	 			 	 <form method="POST" action="../php/editCheck.php" onsubmit="return regAddrsCheck()">
+	 					Address:  <?php echo $user['address']; ?>
+                        <input type="text" name="address" id="address" oninput="regAddrsCheck()">
+                        <input type="submit" name="changeAddress" value="changeAddress">
+                        <p id="addMsg"></p>
+                      </form>  
+                 </td>       
+	 		</tr>
 	 	</table>
 	 	 <script type="text/javascript" src="../script/script.js"></script>   
 	 	</body>

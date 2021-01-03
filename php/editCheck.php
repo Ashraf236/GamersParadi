@@ -71,46 +71,46 @@
    }
    else if(isset($_POST['changeAddress'])){
 		if(empty($_POST['address'])){
-			header('location: ../view/userEdit.php?msg=null_date');
+			header('location: ../view/userEdit.php?msg=null_add');
 		}
 		else{
 		$uadd = $_POST['address'];
 		$ch=editUserAddress($uadd,$usname);
 		if($ch){
-		header('location: ../php/logOut.php?msg=changed_DOB');
+		header('location: ../php/logOut.php?msg=changed_Add');
 	   }
 	   else{
-	   	     header('location: ../view/userEdit.php?msg=dob_not_chnged');
+	   	     header('location: ../view/userEdit.php?msg=add_not_chnged');
 	   }
 	}
    }
    else if(isset($_POST['changeName'])){
 		if(empty($_POST['name'])){
-			header('location: ../view/userEdit.php?msg=null_date');
+			header('location: ../view/userEdit.php?msg=null_nm');
 		}
 		else{
 		$un = $_POST['name'];
 		$ch=editName($un,$usname);
 		if($ch){
-		header('location: ../php/logOut.php?msg=changed_DOB');
+		header('location: ../php/logOut.php?msg=changed_nm');
 	   }
 	   else{
-	   	     header('location: ../view/userEdit.php?msg=dob_not_chnged');
+	   	     header('location: ../view/userEdit.php?msg=nm_not_chnged');
 	   }
 	}
    }
    else if(isset($_POST['changeContact'])){
 		if(empty($_POST['contact'])){
-			header('location: ../view/userEdit.php?msg=null_date');
+			header('location: ../view/userEdit.php?msg=null_cnt');
 		}
 		else{
 		$ucn = $_POST['contact'];
 		$ch=editUserContact($ucn,$usname);
 		if($ch){
-		header('location: ../php/logOut.php?msg=changed_DOB');
+		header('location: ../php/logOut.php?msg=changed_cnt');
 	   }
 	   else{
-	   	     header('location: ../view/userEdit.php?msg=dob_not_chnged');
+	   	     header('location: ../view/userEdit.php?msg=cnt_not_chnged');
 	   }
 	}
    }

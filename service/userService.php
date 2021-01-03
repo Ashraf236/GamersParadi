@@ -183,7 +183,7 @@
 	};
 	function editUserContant($fuct,$fid){
 		$conn = getConnection();
-		$sql = "update users set dob ='$fuct' where uname ='$fid'";
+		$sql = "update users set contactno ='$fuct' where uname ='$fid'";
 		$status = mysqli_query($conn, $sql);
 		
 		if($status){
