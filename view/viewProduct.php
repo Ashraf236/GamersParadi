@@ -1,9 +1,9 @@
 <?php
-  
-        include('../service/productService.php');
-        $productList[] = getAllProduct(); 
-        var_dump($productList);
-    
+
+include('../model/dbConnector.php');
+$conn = getconnection();
+$sql = "select * from product";
+$res = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +11,8 @@
   <title>Products</title>
 
 </head>
-<body> 
+<body>
+   <center> 
       <h3>Product List</h3>
   <table border="1"> 
     <tr>
@@ -23,20 +24,22 @@
       <td>ACTION</td>
     </tr>
 
-  <?php for($i=0; $i<=count($productList); $i++){ ?>
+  <?php while($data = mysqli_fetch_assoc($res)){ ?>
 
       <tr>
-        <td><?=$productList[$i]['pid']?></td>
-        <td><?=$productList[$i]['pname']?></td>
-        <td><?=$productList[$i]['pcredit']?></td>
-        <td><?=$productList[$i]['platform']?></td>
-        <td><?=$productList[$i]['price']?></td>
+        <td><?=$data['pid']?></td>
+        <td><?=$data['pname']?></td>
+        <td><?=$data['pcredit']?></td>
+        <td><?=$data['platform']?></td>
+        <td><?=$data['price']?></td>
         <td>
-          <a href="pbuy.php?id=<?=$productList[$i]['pid']?>">Buy</a>
+          <a href="pbuy.php?id=<?=$data['pid']?>">Buy</a>
         </td>
       </tr>
   <?php } ?>
 
   </table>
+</center>
 </body>
 </html>
+
