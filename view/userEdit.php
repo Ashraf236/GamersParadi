@@ -74,9 +74,9 @@
 	 		<tr>
 	 			<td>
 	 				<form method="POST" action="../php/editCheck.php" onsubmit="return regNameCheck()">
-	 					DOB :  <?php echo $user['name']; ?>
+	 					Name :  <?php echo $user['name']; ?>
 	 					<input type="text" name="name" id="name" oninput="regNameCheck()">
-	 					<input type="submit" name="changeDOB" value="changeDOB">
+	 					<input type="submit" name="changeName" value="changeName">
 	 					<p id="nameMsg"> </p>
 	 				</form>
 	 			</td>
