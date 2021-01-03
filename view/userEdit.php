@@ -61,6 +61,26 @@
 	 				</form>
 	 			</td>
 	 		</tr>
+	 		<tr>
+	 			<td>
+	 				<form method="POST" action="../php/editCheck.php" onsubmit="return regDobCheck()">
+	 					DOB :  <?php echo $user['dob']; ?>
+	 					<input type="date" name="dob" id="dob" oninput="regDobCheck()">
+	 					<input type="submit" name="changeDOB" value="changeDOB">
+	 					<p id="dobMsg"> </p>
+	 				</form>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<td>
+	 				<form method="POST" action="../php/editCheck.php" onsubmit="return regNameCheck()">
+	 					DOB :  <?php echo $user['name']; ?>
+	 					<input type="text" name="name" id="name" oninput="regNameCheck()">
+	 					<input type="submit" name="changeDOB" value="changeDOB">
+	 					<p id="nameMsg"> </p>
+	 				</form>
+	 			</td>
+	 		</tr>
 	 	</table>
 	 	 <script type="text/javascript" src="../script/script.js"></script>   
 	 	</body>

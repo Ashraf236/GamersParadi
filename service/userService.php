@@ -148,4 +148,48 @@
 			return false;
 		}
 	};
+	function editUserDOB($fudob,$fid){
+		$conn = getConnection();
+		$sql = "update users set dob ='$fudob' where uname ='$fid'";
+		$status = mysqli_query($conn, $sql);
+		
+		if($status){
+			return true; 
+		}else{
+			return false;
+		}
+	};
+	function editName($fnm,$fid){
+		$conn = getConnection();
+		$sql = "update users set name ='$fnm' where uname ='$fid'";
+		$status = mysqli_query($conn, $sql);
+		
+		if($status){
+			return true; 
+		}else{
+			return false;
+		}
+	};
+	function editUserAddress($fuadd,$fid){
+		$conn = getConnection();
+		$sql = "update users set address ='$fuadd' where uname ='$fid'";
+		$status = mysqli_query($conn, $sql);
+		
+		if($status){
+			return true; 
+		}else{
+			return false;
+		}
+	};
+	function editUserContant($fuct,$fid){
+		$conn = getConnection();
+		$sql = "update users set dob ='$fuct' where uname ='$fid'";
+		$status = mysqli_query($conn, $sql);
+		
+		if($status){
+			return true; 
+		}else{
+			return false;
+		}
+	};
 ?>

@@ -54,5 +54,65 @@
 	   }
 	   }
 	}
+	else if(isset($_POST['changeDOB'])){
+		if(empty($_POST['dob'])){
+			header('location: ../view/userEdit.php?msg=null_date');
+		}
+		else{
+		$udob = $_POST['dob'];
+		$ch=editUserDOB($udob,$usname);
+		if($ch){
+		header('location: ../php/logOut.php?msg=changed_DOB');
+	   }
+	   else{
+	   	     header('location: ../view/userEdit.php?msg=dob_not_chnged');
+	   }
+	}
+   }
+   else if(isset($_POST['changeAddress'])){
+		if(empty($_POST['address'])){
+			header('location: ../view/userEdit.php?msg=null_date');
+		}
+		else{
+		$uadd = $_POST['address'];
+		$ch=editUserAddress($uadd,$usname);
+		if($ch){
+		header('location: ../php/logOut.php?msg=changed_DOB');
+	   }
+	   else{
+	   	     header('location: ../view/userEdit.php?msg=dob_not_chnged');
+	   }
+	}
+   }
+   else if(isset($_POST['changeName'])){
+		if(empty($_POST['name'])){
+			header('location: ../view/userEdit.php?msg=null_date');
+		}
+		else{
+		$un = $_POST['name'];
+		$ch=editName($un,$usname);
+		if($ch){
+		header('location: ../php/logOut.php?msg=changed_DOB');
+	   }
+	   else{
+	   	     header('location: ../view/userEdit.php?msg=dob_not_chnged');
+	   }
+	}
+   }
+   else if(isset($_POST['changeContact'])){
+		if(empty($_POST['contact'])){
+			header('location: ../view/userEdit.php?msg=null_date');
+		}
+		else{
+		$ucn = $_POST['contact'];
+		$ch=editUserContact($ucn,$usname);
+		if($ch){
+		header('location: ../php/logOut.php?msg=changed_DOB');
+	   }
+	   else{
+	   	     header('location: ../view/userEdit.php?msg=dob_not_chnged');
+	   }
+	}
+   }
 
 ?>
