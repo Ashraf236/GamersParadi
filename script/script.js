@@ -168,7 +168,7 @@ function regEmailCheck(){
     }
     else
     {
-        document.getElementById("emailMsg").innerHTML = "*Valid input; ";
+        document.getElementById("@").innerHTML = "*Valid input; ";
         checkEmail();
         return true; 
     }

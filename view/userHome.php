@@ -30,9 +30,9 @@
             <select id="myselect" onchange="view_myselect(this.value)">
               <option value="">Menu</option>
               <option value="product">GiftCards</option>
-              <option value="edit">Edit Profile</option>
               <option value="messege">Contact us</option>
-            </select>           
+            </select>
+            <a href="../view/userEdit.php">Edit Profile</a>           
           </td>
 
           <td id="homeView" height="900px">

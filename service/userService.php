@@ -115,4 +115,37 @@
 			return false;
 		}
    };
+   function editUserName($funame,$fusn){
+	    $conn = getConnection();
+		$sql = "update users set uname ='$funame' where uname='$fusn'";
+		$status = mysqli_query($conn, $sql);
+		
+		if($status){
+			return true; 
+		}else{
+			return false;
+		}
+	};
+	function editUserEmail($fuemail,$fid){
+		$conn = getConnection();
+		$sql = "update users set email ='$fuemail' where uname ='$fid'";
+		$status = mysqli_query($conn, $sql);
+		
+		if($status){
+			return true; 
+		}else{
+			return false;
+		}
+	};
+	function editUserPassword($fupassword,$fid){
+		$conn = getConnection();
+		$sql = "update users set password ='$fupassword' where uname ='$fid'";
+		$status = mysqli_query($conn, $sql);
+		
+		if($status){
+			return true; 
+		}else{
+			return false;
+		}
+	};
 ?>
